@@ -1,0 +1,82 @@
+.tcm-acupuncture {
+  background-image: url(C:\Users\Admin\React\alhamd-acupuncture\public\bg_image_1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.tcm-acupuncture hr {
+  background-color: var(--secondary-color-blue);
+  height: 3px;
+}
+
+.tcm-acupuncture h1 {
+  font-family: "Times New Roman", Times, serif;
+  box-shadow: 5px 5px 5px var(--main-color-green);
+}
+
+.tcm-acupuncture p,
+.tcm-acupuncture ul {
+  color: #656262;
+}
+
+.tcm-acupuncture span {
+  font-weight: 500;
+  color: var(--secondary-color-blue);
+}
+
+.tcm-acupuncture img {
+  box-shadow: 5px 5px 5px var(--main-color-green);
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.tcm-acupuncture li {
+  list-style: square;
+}
+
+.session-booking-button {
+    display: flex;
+    justify-content: center;
+}
+.tcm-acupuncture button {
+    background-color: var(--main-color-green);
+    color: #fff;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.tcm-acupuncture button:hover {
+    color: var(--secondary-color-blue);
+    background-color: var(--main-color-green);
+}
+@media (min-width: 567px) {
+  .tcm-acupuncture p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .tcm-acupuncture p {
+    font-size: 1.3rem;
+  }
+
+  .tcm-acupuncture img {
+    width: 300px;
+  }
+}
+
+@media (min-width: 992px) {
+  .tcm-acupuncture p {
+    font-size: 1.4rem;
+  }
+
+  .tcm-acupuncture img {
+    width: 360px;
+  }
+}
+
+@media (max-width: 991px) {
+  .tcm-acupuncture {
+    margin-top: -50px;
+  }
+}

@@ -1,0 +1,30 @@
+.about-section {
+    background-image: url(C:\Users\Admin\React\alhamd-acupuncture\public\bg_image_1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.about-clinic, .healer-details {
+    background-image: linear-gradient(to right, rgb(175, 174, 180), #fff);
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    color: rgb(91, 75, 75);
+    font-size: 1.15rem;
+    border: 2px solid #fff;
+}
+.inaugration-img img, .healer-img img {
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.about-section span {
+    color: var(--secondary-color-blue);
+    font-weight: 500;
+}
+
+@media (max-width: 991px) {
+
+    .about-section {
+        margin-top: -50px;
+    }
+}

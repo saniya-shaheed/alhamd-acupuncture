@@ -1,0 +1,287 @@
+.home-section-one {
+  background-image: url(C:\Users\Admin\React\alhamd-acupuncture\public\bg_image_1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.left-side-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.left-side-content h1 {
+  font-family: century;
+}
+
+.left-side-content h4 {
+  font-family: century;
+}
+
+.home-section-one button {
+  background-color: var(--main-color-green);
+  color: #fff;
+  font-weight: bold;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.home-section-one button:hover {
+  background-color: var(--darker-main-green);
+  color: #fff;
+}
+
+.home-section-two {
+  background-color: var(--main-color-green);
+  color: #fff;
+}
+
+.home-section-two p {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  gap: 5px;
+  font-size: 1.2rem;
+}
+
+.home-section-two svg {
+  height: 20px;
+  fill: var(--secondary-color-blue);
+}
+
+.card {
+  border: none;
+  border-radius: 0;
+}
+
+.home-section-three a {
+  text-decoration: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card:hover {
+  box-shadow: 10px 20px 20px 0px var(--main-color-green);
+}
+
+.card-body {
+  border: 1px solid rgb(225, 214, 214);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.card-title {
+  font-family: century;
+  font-size: 1.75rem;
+  color: var(--secondary-color-blue);
+}
+
+.card-text {
+  font-size: 1.2rem;
+  color: gray;
+}
+
+.card img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.achieve-balance-container {
+  background-color: var(--main-color-green);
+  color: #fff;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.achieve-balance-container i {
+  color: var(--secondary-color-blue);
+}
+
+.home-section-four h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: var(--secondary-color-blue);
+}
+
+.home-section-four span {
+  color: var(--main-color-green);
+}
+
+.home-section-four hr {
+  color: var(--darker-main-green);
+}
+
+.left-part-home-section-five {
+  margin-top: -17px;
+}
+
+.home-section-five h2 {
+  color: var(--secondary-color-blue);
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+.home-section-five p,
+.home-section-five ul {
+  font-size: 1.2rem;
+  color: gray;
+}
+
+.home-section-five li {
+  list-style: square;
+  padding: 0.25em;
+}
+
+.home-section-five img {
+  width: 100%;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.right-home-section-five p {
+  width: 80%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-section-six {
+  background-image: url(C:\Users\Admin\React\alhamd-acupuncture\public\bg_image_1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.home-section-six a {
+  color: black;
+  text-decoration: none;
+}
+
+.healers-image img {
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.healers-detail {
+  background-image: linear-gradient(to right, rgb(175, 174, 180), #fff);
+}
+
+.healers-detail h1,
+.healers-detail h3 {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.healers-detail h3 {
+  font-weight: 500;
+  color: rgb(60, 58, 58);
+}
+
+.healers-detail p {
+  font-size: 1.2rem;
+  color: rgb(91, 75, 75);
+}
+
+@media (min-width: 576px) {
+  .home-section-one h1,
+  .home-section-one h4 {
+    width: 70%;
+  }
+
+  .card img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 767px) {
+  .healers-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .healers-detail-container {
+    margin-top: -52px;
+  }
+
+  .healers-detail {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  .healers-image img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .home-section-one {
+    background-image: url(C:\Users\Admin\React\alhamd-acupuncture\public\bg_home_1.png);
+  }
+
+  .home-section-one h1,
+  .home-section-one h4 {
+    width: 50%;
+  }
+
+  .home-section-five ul {
+    margin-top: -95px;
+  }
+
+  .home-section-six {
+    position: relative;
+    height: 700px;
+  }
+
+  .healers-image {
+    position: absolute;
+    top: 12%;
+    left: 8%;
+    height: 200px;
+    width: 38%;
+  }
+
+  .healers-image img {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .healers-detail {
+    position: absolute;
+    width: 60%;
+    left: 35%;
+    top: 30%;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border: 5px solid #fff;
+  }
+
+  .healers-detail:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .healers-detail h3 {
+    margin-top: -12px;
+  }
+}
+
+@media (min-width: 992px) {
+
+    .home-section {
+        margin-top: -50px;
+    }
+
+    
+  .home-section-one h1,
+  .home-section-one h4 {
+    width: 90%;
+  }
+}

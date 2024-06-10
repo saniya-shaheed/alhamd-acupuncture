@@ -1,0 +1,15 @@
+:root {
+  --main-color-green: rgb(146, 202, 78);
+  --secondary-color-blue: rgb(28, 110, 183);
+  --dropdown-item-bg-color: rgb(232, 240, 247);
+  --darker-main-green: rgb(82, 149, 49);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 164px;
+}

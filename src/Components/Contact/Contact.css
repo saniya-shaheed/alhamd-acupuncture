@@ -1,0 +1,30 @@
+.contact-section {
+    background-image: url(C:\Users\Admin\React\alhamd-acupuncture\public\bg_image_1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.contact-section h1 {
+    font-weight: 400;
+    box-shadow: 5px 5px 5px var(--main-color-green);
+}
+
+.contact-section label {
+    font-weight: 500;
+}
+
+.contact-section button {
+    background-color: var(--main-color-green);
+    color: #fff;
+    font-weight: bold;
+}
+
+.contact-section button:hover {
+    background-color: var(--darker-main-green);
+}
+@media (max-width: 991px) {
+
+    .contact-section {
+        margin-top: -50px;
+    }
+}
