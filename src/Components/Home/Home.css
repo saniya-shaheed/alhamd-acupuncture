@@ -154,7 +154,7 @@
   margin-right: auto;
 }
 
-.home-section-six {
+.home-section-six, .home-section-seven {
   background-image: url(C:\Users\Admin\React\alhamd-acupuncture\public\bg_image_1.jpg);
   background-position: center;
   background-size: cover;
@@ -188,6 +188,19 @@
   font-size: 1.2rem;
   color: rgb(91, 75, 75);
 }
+
+.home-section-seven {
+  font-family: 'Times New Roman', Times, serif;
+}
+.home-section-seven h2 {
+  font-weight: bold;
+}
+
+.home-section-seven p {
+  font-size: 1.2rem;
+  
+}
+
 
 @media (min-width: 576px) {
   .home-section-one h1,

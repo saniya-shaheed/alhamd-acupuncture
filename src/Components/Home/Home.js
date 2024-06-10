@@ -219,6 +219,36 @@ function Home() {
           </div>
         </a>
       </div>
+
+      {/* HOME SECTION SEVEN */}
+      <div className="home-section-seven testimonials ">
+        <h2 className="p-4"><i> Great Responses are our Motivation ...</i></h2>
+        <div className="d-flex flex-wrap">
+        <div className="col-md-6">
+        <p className="p-5 pt-2 pb-1"><i>"After struggling with chronic pain for years, I found relief and healing at this
+         acupuncture clinic. The skilled practitioners tailored a treatment plan just for
+          me, and I'm amazed at the results. Highly recommend!"</i></p>
+        </div>
+        <div className="col-md-6">
+        <p className="p-5 pt-2 pb-1"><i>"I was skeptical about acupuncture at first, but this clinic changed my mind
+         completely. The calming atmosphere, combined with the expertise of the 
+         practitioners, made my sessions incredibly relaxing and effective. I'm grateful
+          for the positive impact it's had on my health."</i></p>
+        </div>
+        <div className="col-md-6">
+        <p className="p-5 pt-2"><i>"As someone who suffers from anxiety, I was looking for alternative therapies
+         to manage my symptoms. Acupuncture at this clinic has become an essential part
+          of my self-care routine. It helps me find balance and tranquility in the midst
+           of life's chaos."</i></p>
+        </div>
+        <div className="col-md-6">
+        <p className="p-5 pt-2"><i>"I've been coming to this acupuncture clinic for years, and I can't imagine my 
+        life without it. Whether it's managing pain, boosting my immune system, or simply
+         finding a moment of peace, acupuncture has been a game-changer for me. Thank you
+          to the wonderful team here for their expertise and compassion."</i></p>
+        </div>
+        </div>
+      </div>
     </section>
   );
 }
