@@ -1,7 +1,17 @@
 import React from "react";
 import "./TCMAcupuncture.css";
+import { useModal } from "../Hooks/useModal";
+import BookAnAppointment from "../BookAnAppointment";
 
 function AuricularAcupunctuer() {
+  const {
+    modalShow,
+    confirmationWindow,
+    handleShow,
+    handleSubmit,
+    handleClose,
+    closeConfirmation,
+  } = useModal();
   return (
     <section className="tcm-acupuncture p-2 p-sm-4 p-md-5">
       <h1 className="display-2 p-3 pt-4"> Sculp & Auricular Acupuncture</h1>
@@ -14,7 +24,11 @@ function AuricularAcupunctuer() {
           treat various health conditions.
         </p>
         <div className="tcm-image-container col-sm-6 d-flex justify-content-center">
-          <img src="Ear-Acupuncture.jpg" alt="Auricular Acupuncture" className="w-100"/>
+          <img
+            src="/Images/Ear-Acupuncture.jpg"
+            alt="Auricular Acupuncture"
+            className="w-100"
+          />
         </div>
       </div>
       <h3 className="ps-2">It can solve</h3>
@@ -49,7 +63,29 @@ function AuricularAcupunctuer() {
         step towards better health and well-being today.
       </p>
       <div className="session-booking-button p-5">
-      <button className="btn col-12 col-sm-8 col-md-6"> Book your Session </button>
+        <button className="btn col-12 col-sm-8 col-md-6" onClick={handleShow}>
+          {" "}
+          Book your Session{" "}
+        </button>
+        {modalShow && (
+          <div>
+            <div className="modal-overlay show" onClick={handleClose}></div>
+            <div className="modal-container show">
+              <BookAnAppointment
+                handleClose={handleClose}
+                handleSubmit={handleSubmit}
+              />
+            </div>
+          </div>
+        )}
+        {confirmationWindow && (
+          <div className="confirmation-window">
+            <span className="close-icon" onClick={closeConfirmation}>
+              ✖
+            </span>
+            <p>Your Appointment is Confirmed!</p>
+          </div>
+        )}
       </div>
     </section>
   );

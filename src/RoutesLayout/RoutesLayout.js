@@ -12,11 +12,13 @@ import PNSTherapy from "../Components/TCMAcupuncture/PNSTherapy";
 import Moxibustion from "../Components/TCMAcupuncture/Moxibustion";
 import About from "../Components/About/About";
 import Contact from "../Components/Contact/Contact";
+import ScrollToTop from "../ScrollToTop";
 
 function RoutesLayout() {
   return (
     <div>
-      <Router>
+      <Router basename="/alhamd-acupuncture">
+        <ScrollToTop />
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />

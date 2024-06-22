@@ -1,33 +1,26 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import BookAnAppointment from "../BookAnAppointment";
 import "../BookAnAppointment.css";
+import { useModal } from "../Hooks/useModal";
 
 function Header() {
-  const [modalShow, setModalShow] = useState(false);
-  const [confirmationWindow, setConfirmationWindow] = useState(false);
-
-  const handleShow = () => setModalShow(true);
-
-  const handleSubmit = () => {
-    setModalShow(false);
-    setConfirmationWindow(true);
-  };
-
-  const handleClose = () => {
-    setModalShow(false);
-    setConfirmationWindow(false);
-  };
-
-  const closeConfirmation = () => setConfirmationWindow(false);
+  const {
+    modalShow,
+    confirmationWindow,
+    handleShow,
+    handleSubmit,
+    handleClose,
+    closeConfirmation,
+  } = useModal();
 
   return (
     <header className="header container-fluid">
       <nav className="navbar navbar-expand-lg navbar-light">
         <Link to="/" className="navbar-brand p-3 pt-1 pb-1">
           <img
-            src="logo_and_name.png"
+            src="/Images/logo_and_name.png"
             className="w-100 ps-md-2"
             alt="Al Hamd Acupuncture"
           />

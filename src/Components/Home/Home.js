@@ -1,8 +1,18 @@
 import React, { useState } from "react";
 import "./Home.css";
 import "../Header/Header.css";
+import { useModal } from "../Hooks/useModal";
+import BookAnAppointment from "../BookAnAppointment";
 
 function Home() {
+  const {
+    modalShow,
+    confirmationWindow,
+    handleShow,
+    handleSubmit,
+    handleClose,
+    closeConfirmation,
+  } = useModal();
   return (
     <section className="home-section pt-lg-5">
       {/* HOME SECTION ONE */}
@@ -15,12 +25,34 @@ function Home() {
             Experience the rejuvenating power of acupuncture in a serene and
             supportive environment. Your journey to better health starts here.
           </h4>
-          <button className="btn w-50 ms-auto me-auto p-1 d-flex align-items-center justify-content-center">
+          <button
+            className="btn w-50 ms-auto me-auto p-1 d-flex align-items-center justify-content-center"
+            onClick={handleShow}
+          >
             Book an Appointment
           </button>
         </div>
         <div className="right-side-no-content col-lg-6 d-none d-lg-flex"></div>
       </div>
+      {modalShow && (
+        <div>
+          <div className="modal-overlay show" onClick={handleClose}></div>
+          <div className="modal-container show">
+            <BookAnAppointment
+              handleClose={handleClose}
+              handleSubmit={handleSubmit}
+            />
+          </div>
+        </div>
+      )}
+      {confirmationWindow && (
+        <div className="confirmation-window">
+          <span className="close-icon" onClick={closeConfirmation}>
+            ✖
+          </span>
+          <p>Your Appointment is Confirmed!</p>
+        </div>
+      )}
       {/* HOME SECTION TWO  */}
       <div className="home-section-two d-sm-flex pt-3 pb-3">
         <p>
@@ -48,7 +80,7 @@ function Home() {
         <div className="row">
           <a href="" className="col-12 col-md-6 col-lg-4 p-3">
             <div class="card">
-              <img src="tsm_acup.jpg" class="card-img-top" alt="..." />
+              <img src="/Images/tsm_acup.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title"> TSM Acupuncture </h5>
                 <p class="card-text">
@@ -62,7 +94,11 @@ function Home() {
 
           <a href="" className="col-12 col-md-6 col-lg-4 p-3">
             <div class="card">
-              <img src="auricular_acup.jpg" class="card-img-top" alt="..." />
+              <img
+                src="/Images/auricular_acup.jpg"
+                class="card-img-top"
+                alt="..."
+              />
               <div class="card-body">
                 <h5 class="card-title"> Sculp & Auricular Acupuncture </h5>
                 <p class="card-text">
@@ -76,7 +112,11 @@ function Home() {
 
           <a href="" className="col-12 col-md-6 col-lg-4 p-3">
             <div class="card">
-              <img src="master_tungs.jpg" class="card-img-top" alt="..." />
+              <img
+                src="/Images/master_tungs.jpg"
+                class="card-img-top"
+                alt="..."
+              />
               <div class="card-body">
                 <h5 class="card-title"> Master Tung's Acupuncture </h5>
                 <p class="card-text">
@@ -90,7 +130,11 @@ function Home() {
 
           <a href="" className="col-12 col-md-6 col-lg-4 p-3">
             <div class="card">
-              <img src="moxibustion.jpg" class="card-img-top" alt="..." />
+              <img
+                src="/Images/moxibustion.jpg"
+                class="card-img-top"
+                alt="..."
+              />
               <div class="card-body">
                 <h5 class="card-title"> Moxibustion </h5>
                 <p class="card-text">
@@ -104,7 +148,11 @@ function Home() {
 
           <a href="" className="col-12 col-md-6 col-lg-4 p-3">
             <div class="card">
-              <img src="cupping_therapy.jpg" class="card-img-top" alt="..." />
+              <img
+                src="/Images/cupping_therapy.jpg"
+                class="card-img-top"
+                alt="..."
+              />
               <div class="card-body">
                 <h5 class="card-title"> Cupping Therapy </h5>
                 <p class="card-text">
@@ -118,7 +166,7 @@ function Home() {
 
           <a href="" className="col-12 col-md-6 col-lg-4 p-3">
             <div class="card">
-              <img src="sujok.jpg" class="card-img-top" alt="..." />
+              <img src="/Images/sujok.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title"> Sujok Therapy </h5>
                 <p class="card-text">
@@ -132,7 +180,7 @@ function Home() {
 
           <a href="" className="col-12 col-md-6 col-lg-4 p-3">
             <div class="card">
-              <img src="pnst.jpg" class="card-img-top" alt="..." />
+              <img src="/Images/pnst.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title">
                   {" "}
@@ -183,7 +231,7 @@ function Home() {
           </ul>
         </div>
         <div className="col-md-6 right-part-home-section-five p-4 p-md-5 pt-3 pt-md-5">
-          <img src="home_ mission.jpg" alt="Treating" />
+          <img src="/Images/home_ mission.jpg" alt="Treating" />
           <p className="pt-5">
             {" "}
             We uses a holistic approach to restore your body's natural balance.
@@ -199,7 +247,11 @@ function Home() {
       {/* HOME SECTION SIX */}
       <div className="home-section-six d-md-flex">
         <div className="healers-image p-4 p-md-0">
-          <img src="healer_home.jpg" alt="Healer" className="img-fluid" />
+          <img
+            src="/Images/healer_home.jpg"
+            alt="Healer"
+            className="img-fluid"
+          />
         </div>
         <a href="">
           <div className="p-4 pt-1 healers-detail-container">
@@ -222,31 +274,53 @@ function Home() {
 
       {/* HOME SECTION SEVEN */}
       <div className="home-section-seven testimonials ">
-        <h2 className="p-4"><i> Great Responses are our Motivation ...</i></h2>
+        <h2 className="p-4">
+          <i> Great Responses are our Motivation ...</i>
+        </h2>
         <div className="d-flex flex-wrap">
-        <div className="col-md-6">
-        <p className="p-5 pt-2 pb-1"><i>"After struggling with chronic pain for years, I found relief and healing at this
-         acupuncture clinic. The skilled practitioners tailored a treatment plan just for
-          me, and I'm amazed at the results. Highly recommend!"</i></p>
-        </div>
-        <div className="col-md-6">
-        <p className="p-5 pt-2 pb-1"><i>"I was skeptical about acupuncture at first, but this clinic changed my mind
-         completely. The calming atmosphere, combined with the expertise of the 
-         practitioners, made my sessions incredibly relaxing and effective. I'm grateful
-          for the positive impact it's had on my health."</i></p>
-        </div>
-        <div className="col-md-6">
-        <p className="p-5 pt-2"><i>"As someone who suffers from anxiety, I was looking for alternative therapies
-         to manage my symptoms. Acupuncture at this clinic has become an essential part
-          of my self-care routine. It helps me find balance and tranquility in the midst
-           of life's chaos."</i></p>
-        </div>
-        <div className="col-md-6">
-        <p className="p-5 pt-2"><i>"I've been coming to this acupuncture clinic for years, and I can't imagine my 
-        life without it. Whether it's managing pain, boosting my immune system, or simply
-         finding a moment of peace, acupuncture has been a game-changer for me. Thank you
-          to the wonderful team here for their expertise and compassion."</i></p>
-        </div>
+          <div className="col-md-6">
+            <p className="p-5 pt-2 pb-1">
+              <i>
+                "After struggling with chronic pain for years, I found relief
+                and healing at this acupuncture clinic. The skilled
+                practitioners tailored a treatment plan just for me, and I'm
+                amazed at the results. Highly recommend!"
+              </i>
+            </p>
+          </div>
+          <div className="col-md-6">
+            <p className="p-5 pt-2 pb-1">
+              <i>
+                "I was skeptical about acupuncture at first, but this clinic
+                changed my mind completely. The calming atmosphere, combined
+                with the expertise of the practitioners, made my sessions
+                incredibly relaxing and effective. I'm grateful for the positive
+                impact it's had on my health."
+              </i>
+            </p>
+          </div>
+          <div className="col-md-6">
+            <p className="p-5 pt-2">
+              <i>
+                "As someone who suffers from anxiety, I was looking for
+                alternative therapies to manage my symptoms. Acupuncture at this
+                clinic has become an essential part of my self-care routine. It
+                helps me find balance and tranquility in the midst of life's
+                chaos."
+              </i>
+            </p>
+          </div>
+          <div className="col-md-6">
+            <p className="p-5 pt-2">
+              <i>
+                "I've been coming to this acupuncture clinic for years, and I
+                can't imagine my life without it. Whether it's managing pain,
+                boosting my immune system, or simply finding a moment of peace,
+                acupuncture has been a game-changer for me. Thank you to the
+                wonderful team here for their expertise and compassion."
+              </i>
+            </p>
+          </div>
         </div>
       </div>
     </section>

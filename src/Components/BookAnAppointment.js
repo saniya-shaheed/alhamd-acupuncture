@@ -31,12 +31,11 @@ const BookAnAppointment = ({ handleSubmit, handleClose }) => {
   };
 
   const validateForm = () => {
-    // Check if at least one radio button is selected
     if (!timeSlot) {
       alert("Please select a time slot");
-      return false; // Prevent form submission
+      return false; 
     }
-    return true; // Allow form submission
+    return true; 
   };
 
   return (
@@ -49,7 +48,7 @@ const BookAnAppointment = ({ handleSubmit, handleClose }) => {
           onSubmit={(e) => {
             e.preventDefault();
             if (validateForm()) {
-              handleSubmit(); // Call the handleSubmit function only if the form is valid
+              handleSubmit(); 
             }
           }}
         >

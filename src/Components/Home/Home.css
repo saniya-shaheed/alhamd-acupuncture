@@ -1,5 +1,5 @@
 .home-section-one {
-  background-image: url(C:\Users\Admin\React\alhamd-acupuncture\public\bg_image_1.jpg);
+  background-image: url(C:\Users\Admin\React\alhamd-acupuncture\public\Images\bg_image_1.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -155,7 +155,7 @@
 }
 
 .home-section-six, .home-section-seven {
-  background-image: url(C:\Users\Admin\React\alhamd-acupuncture\public\bg_image_1.jpg);
+  background-image: url(C:\Users\Admin\React\alhamd-acupuncture\public\Images\bg_image_1.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -236,7 +236,7 @@
 
 @media (min-width: 768px) {
   .home-section-one {
-    background-image: url(C:\Users\Admin\React\alhamd-acupuncture\public\bg_home_1.png);
+    background-image: url(C:\Users\Admin\React\alhamd-acupuncture\public\Images\bg_home_1.png);
   }
 
   .home-section-one h1,

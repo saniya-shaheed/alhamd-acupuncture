@@ -1,5 +1,3 @@
-/* MODAL CSS */
-/* Modal styles */
 .modal {
   display: none;
   position: fixed;
@@ -117,25 +115,25 @@
 
 /* WebKit-based browsers (Chrome, Safari) */
 .modal::-webkit-scrollbar {
-  width: 12px; /* Width of the scrollbar */
+  width: 12px; 
 }
 
 .modal::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Background of the scrollbar track */
+  background: #f1f1f1; 
   border-radius: 10px;
 }
 
 .modal::-webkit-scrollbar-thumb {
-  background: #888; /* Color of the scrollbar thumb */
+  background: #888; 
   border-radius: 10px;
 }
 
 .modal::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Color when hovering over the scrollbar thumb */
+  background: #555; 
 }
 
-/* Firefox */
+/* Firefox 
 .modal {
-  scrollbar-width: thin; /* Thin scrollbar */
-  scrollbar-color: #888 #f1f1f1; /* thumb color and track color */
-}
+  scrollbar-width: thin; 
+  scrollbar-color: #888 #f1f1f1; 
+}  */

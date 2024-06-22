@@ -1,7 +1,17 @@
 import React from "react";
 import "./TCMAcupuncture.css";
+import { useModal } from "../Hooks/useModal";
+import BookAnAppointment from "../BookAnAppointment";
 
 function MasterTungsAcupuncture() {
+  const {
+    modalShow,
+    confirmationWindow,
+    handleShow,
+    handleSubmit,
+    handleClose,
+    closeConfirmation,
+  } = useModal();
   return (
     <section className="tcm-acupuncture p-2 p-sm-4 p-md-5">
       <h1 className="display-2 p-3 pt-4"> Master Tung's Acupuncture</h1>
@@ -14,7 +24,10 @@ function MasterTungsAcupuncture() {
           therapeutic effects.
         </p>
         <div className="tcm-image-container col-sm-6 d-flex justify-content-center">
-          <img src="mastertung_acupuncture.jpg" alt="Master Tung's Acupuncture" />
+          <img
+            src="/Images/mastertung_acupuncture.jpg"
+            alt="Master Tung's Acupuncture"
+          />
         </div>
       </div>
       <h3 className="ps-2">It can solve</h3>
@@ -50,7 +63,29 @@ function MasterTungsAcupuncture() {
         providing significant relief after just a few sessions.
       </p>
       <div className="session-booking-button p-5">
-      <button className="btn col-12  col-sm-8 col-md-6"> Book your Session </button>
+        <button className="btn col-12  col-sm-8 col-md-6" onClick={handleShow}>
+          {" "}
+          Book your Session{" "}
+        </button>
+        {modalShow && (
+          <div>
+            <div className="modal-overlay show" onClick={handleClose}></div>
+            <div className="modal-container show">
+              <BookAnAppointment
+                handleClose={handleClose}
+                handleSubmit={handleSubmit}
+              />
+            </div>
+          </div>
+        )}
+        {confirmationWindow && (
+          <div className="confirmation-window">
+            <span className="close-icon" onClick={closeConfirmation}>
+              ✖
+            </span>
+            <p>Your Appointment is Confirmed!</p>
+          </div>
+        )}
       </div>
     </section>
   );
