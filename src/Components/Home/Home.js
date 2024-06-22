@@ -77,138 +77,159 @@ function Home() {
       </div>
 
       {/* HOME SECTION THREE  */}
-      <div className="home-section-three p-md-5 p-3 ">
+      <div className="home-section-three p-md-5 p-3">
+  <div id="carouselExample" className="carousel slide" data-bs-ride="carousel">
+    <div className="carousel-inner">
+      <div className="carousel-item active">
         <div className="row">
-          <Link to='/tcmacupuncture' className="col-12 col-md-6 col-lg-4 p-3">
-            <div class="card">
+          <div className="col-12 col-md-6 col-lg-4 p-3">
+            <Link to='/tcmacupuncture' className="card">
               <img
                 src={process.env.PUBLIC_URL + "/Images/tsm_acup.jpg"}
-                class="card-img-top"
+                className="card-img-top"
                 alt="..."
               />
-              <div class="card-body">
-                <h5 class="card-title"> TSM Acupuncture </h5>
-                <p class="card-text">
+              <div className="card-body">
+                <h5 className="card-title"> TSM Acupuncture </h5>
+                <p className="card-text">
                   Experience the timeless wisdom of Traditional Chinese Medicine
                   with our TCM Acupuncture, designed to restore balance and
                   harmony to your body.
                 </p>
               </div>
-            </div>
-          </Link>
+            </Link>
+          </div>
 
-          <Link to='/auricularacupuncture' className="col-12 col-md-6 col-lg-4 p-3">
-            <div class="card">
+          <div className="col-12 col-md-6 col-lg-4 p-3">
+            <Link to='/auricularacupuncture' className="card">
               <img
                 src={process.env.PUBLIC_URL + "/Images/auricular_acup.jpg"}
-                class="card-img-top"
+                className="card-img-top"
                 alt="..."
               />
-              <div class="card-body">
-                <h5 class="card-title"> Sculp & Auricular Acupuncture </h5>
-                <p class="card-text">
+              <div className="card-body">
+                <h5 className="card-title"> Sculp & Auricular Acupuncture </h5>
+                <p className="card-text">
                   Discover the benefits of Auricular Acupuncture, a specialized
                   therapy targeting key points in the ear to promote overall
                   health and wellness.
                 </p>
               </div>
-            </div>
-          </Link>
+            </Link>
+          </div>
 
-          <Link to='/mastertungsacupuncture' className="col-12 col-md-6 col-lg-4 p-3">
-            <div class="card">
+          <div className="col-12 col-md-6 col-lg-4 p-3">
+            <Link to='/mastertungsacupuncture' className="card">
               <img
                 src={process.env.PUBLIC_URL + "/Images/master_tungs.jpg"}
-                class="card-img-top"
+                className="card-img-top"
                 alt="..."
               />
-              <div class="card-body">
-                <h5 class="card-title"> Master Tung's Acupuncture </h5>
-                <p class="card-text">
+              <div className="card-body">
+                <h5 className="card-title"> Master Tung's Acupuncture </h5>
+                <p className="card-text">
                   Unlock the healing power of Master Tung's Acupuncture,
                   renowned for its rapid and effective pain relief using unique
                   points and techniques.
                 </p>
               </div>
-            </div>
-          </Link>
+            </Link>
+          </div>
+        </div>
+      </div>
 
-          <Link to='/moxibustion' className="col-12 col-md-6 col-lg-4 p-3">
-            <div class="card">
+      <div className="carousel-item">
+        <div className="row">
+          <div className="col-12 col-md-6 col-lg-4 p-3">
+            <Link to='/moxibustion' className="card">
               <img
                 src={process.env.PUBLIC_URL + "/Images/moxibustion.jpg"}
-                class="card-img-top"
+                className="card-img-top"
                 alt="..."
               />
-              <div class="card-body">
-                <h5 class="card-title"> Moxibustion </h5>
-                <p class="card-text">
+              <div className="card-body">
+                <h5 className="card-title"> Moxibustion </h5>
+                <p className="card-text">
                   Experience the soothing warmth of Moxibustion, a traditional
                   therapy that uses heat to stimulate healing and enhance your
                   vitality.
                 </p>
               </div>
-            </div>
-          </Link>
+            </Link>
+          </div>
 
-          <Link to='/cuppingtherapy' className="col-12 col-md-6 col-lg-4 p-3">
-            <div class="card">
+          <div className="col-12 col-md-6 col-lg-4 p-3">
+            <Link to='/cuppingtherapy' className="card">
               <img
                 src={process.env.PUBLIC_URL + "/Images/cupping_therapy.jpg"}
-                class="card-img-top"
+                className="card-img-top"
                 alt="..."
               />
-              <div class="card-body">
-                <h5 class="card-title"> Cupping Therapy </h5>
-                <p class="card-text">
+              <div className="card-body">
+                <h5 className="card-title"> Cupping Therapy </h5>
+                <p className="card-text">
                   Revitalize your body with our ancient Cupping Therapy, known
                   for its ability to improve circulation, reduce pain, and
                   remove toxins.
                 </p>
               </div>
-            </div>
-          </Link>
+            </Link>
+          </div>
 
-          <Link to='/sujoktherapy' className="col-12 col-md-6 col-lg-4 p-3">
-            <div class="card">
+          <div className="col-12 col-md-6 col-lg-4 p-3">
+            <Link to='/sujoktherapy' className="card">
               <img
                 src={process.env.PUBLIC_URL + "/Images/sujok.jpg"}
-                class="card-img-top"
+                className="card-img-top"
                 alt="..."
               />
-              <div class="card-body">
-                <h5 class="card-title"> Sujok Therapy </h5>
-                <p class="card-text">
+              <div className="card-body">
+                <h5 className="card-title"> Sujok Therapy </h5>
+                <p className="card-text">
                   Benefit from Sujok Therapy, a unique and effective treatment
                   that balances your body’s energy through specific points on
                   the hands and feet.
                 </p>
               </div>
-            </div>
-          </Link>
+            </Link>
+          </div>
+        </div>
+      </div>
 
-          <Link to='/pnsttherapy' className="col-12 col-md-6 col-lg-4 p-3">
-            <div class="card">
+      <div className="carousel-item">
+        <div className="row">
+          <div className="col-12 col-md-6 col-lg-4 p-3">
+            <Link to='/pnsttherapy' className="card">
               <img
                 src={process.env.PUBLIC_URL + "/Images/pnst.jpg"}
-                class="card-img-top"
+                className="card-img-top"
                 alt="..."
               />
-              <div class="card-body">
-                <h5 class="card-title">
-                  {" "}
-                  Peripheral Nerve Stimulation Therapy{" "}
-                </h5>
-                <p class="card-text">
+              <div className="card-body">
+                <h5 className="card-title"> Peripheral Nerve Stimulation Therapy </h5>
+                <p className="card-text">
                   Enhance your wellness with PNST, a cutting-edge therapy that
                   provides targeted relief for nerve pain and promotes optimal
                   nervous system function.
                 </p>
               </div>
-            </div>
-          </Link>
+            </Link>
+          </div>
         </div>
       </div>
+    </div>
+
+    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span className="visually-hidden">Previous</span>
+    </button>
+    <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span className="carousel-control-next-icon" aria-hidden="true"></span>
+      <span className="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
       <div className="achieve-balance-container p-3">
         <h3>
           Achieve <i>Balance</i> and Live <i>Pain-Free</i> at Every Stage of
