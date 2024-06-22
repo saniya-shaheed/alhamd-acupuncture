@@ -1,9 +1,54 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import "./Home.css";
 import "../Header/Header.css";
 import { useModal } from "../Hooks/useModal";
 import BookAnAppointment from "../BookAnAppointment";
 import { Link } from "react-router-dom";
+
+const cardsData = [
+  {
+    to: "/tcmacupuncture",
+    imgSrc: "/Images/tsm_acup.jpg",
+    title: "TSM Acupuncture",
+    text: "Experience the timeless wisdom of Traditional Chinese Medicine with our TCM Acupuncture, designed to restore balance and harmony to your body.",
+  },
+  {
+    to: "/auricularacupuncture",
+    imgSrc: "/Images/auricular_acup.jpg",
+    title: "Sculp & Auricular Acupuncture",
+    text: "Discover the benefits of Auricular Acupuncture, a specialized therapy targeting key points in the ear to promote overall health and wellness.",
+  },
+  {
+    to: "/mastertungsacupuncture",
+    imgSrc: "/Images/master_tungs.jpg",
+    title: "Master Tung's Acupuncture",
+    text: "Unlock the healing power of Master Tung's Acupuncture, renowned for its rapid and effective pain relief using unique points and techniques.",
+  },
+  {
+    to: "/moxibustion",
+    imgSrc: "/Images/moxibustion.jpg",
+    title: "Moxibustion",
+    text: "Experience the soothing warmth of Moxibustion, a traditional therapy that uses heat to stimulate healing and enhance your vitality.",
+  },
+  {
+    to: "/cuppingtherapy",
+    imgSrc: "/Images/cupping_therapy.jpg",
+    title: "Cupping Therapy",
+    text: "Revitalize your body with our ancient Cupping Therapy, known for its ability to improve circulation, reduce pain, and remove toxins.",
+  },
+  {
+    to: "/sujoktherapy",
+    imgSrc: "/Images/sujok.jpg",
+    title: "Sujok Therapy",
+    text: "Benefit from Sujok Therapy, a unique and effective treatment that balances your body’s energy through specific points on the hands and feet.",
+  },
+  {
+    to: "/pnsttherapy",
+    imgSrc: "/Images/pnst.jpg",
+    title: "Peripheral Nerve Stimulation Therapy",
+    text: "Enhance your wellness with PNST, a cutting-edge therapy that provides targeted relief for nerve pain and promotes optimal nervous system function.",
+  },
+];
 
 function Home() {
   const {
@@ -14,6 +59,45 @@ function Home() {
     handleClose,
     closeConfirmation,
   } = useModal();
+
+  useEffect(() => {
+    // Add resize event listener
+    window.addEventListener("resize", adjustCarousel);
+    // Initial adjustment
+    adjustCarousel();
+    // Cleanup on unmount
+    return () => {
+      window.removeEventListener("resize", adjustCarousel);
+    };
+  }, []);
+
+  const adjustCarousel = () => {
+    const itemsPerSlide = getItemsPerSlide();
+    const carouselInner = document.querySelector(".carousel-inner");
+    const cards = Array.from(document.querySelectorAll(".card-container"));
+    carouselInner.innerHTML = "";
+
+    for (let i = 0; i < cards.length; i += itemsPerSlide) {
+      const carouselItem = document.createElement("div");
+      carouselItem.className = "carousel-item";
+      if (i === 0) carouselItem.classList.add("active");
+      const row = document.createElement("div");
+      row.className = "row";
+      for (let j = i; j < i + itemsPerSlide && j < cards.length; j++) {
+        row.appendChild(cards[j]);
+      }
+      carouselItem.appendChild(row);
+      carouselInner.appendChild(carouselItem);
+    }
+  };
+
+  const getItemsPerSlide = () => {
+    const width = window.innerWidth;
+    if (width < 576) return 1;
+    if (width < 768) return 2;
+    return 3;
+  };
+
   return (
     <section className="home-section pt-lg-5">
       {/* HOME SECTION ONE */}
@@ -78,157 +162,57 @@ function Home() {
 
       {/* HOME SECTION THREE  */}
       <div className="home-section-three p-md-5 p-3">
-  <div id="carouselExample" className="carousel slide" data-bs-ride="carousel">
-    <div className="carousel-inner">
-      <div className="carousel-item active">
-        <div className="row">
-          <div className="col-12 col-md-6 col-lg-4 p-3">
-            <Link to='/tcmacupuncture' className="card">
-              <img
-                src={process.env.PUBLIC_URL + "/Images/tsm_acup.jpg"}
-                className="card-img-top"
-                alt="..."
-              />
-              <div className="card-body">
-                <h5 className="card-title"> TSM Acupuncture </h5>
-                <p className="card-text">
-                  Experience the timeless wisdom of Traditional Chinese Medicine
-                  with our TCM Acupuncture, designed to restore balance and
-                  harmony to your body.
-                </p>
+        <div
+          id="carouselExample"
+          className="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div className="carousel-inner">
+            {cardsData.map((card, index) => (
+              <div
+                key={index}
+                className="col-12 col-sm-6 col-md-4 p-3 card-container"
+              >
+                <Link to={card.to} className="card">
+                  <img
+                    src={process.env.PUBLIC_URL + card.imgSrc}
+                    className="card-img-top"
+                    alt={card.title}
+                  />
+                  <div className="card-body">
+                    <h5 className="card-title">{card.title}</h5>
+                    <p className="card-text">{card.text}</p>
+                  </div>
+                </Link>
               </div>
-            </Link>
+            ))}
           </div>
-
-          <div className="col-12 col-md-6 col-lg-4 p-3">
-            <Link to='/auricularacupuncture' className="card">
-              <img
-                src={process.env.PUBLIC_URL + "/Images/auricular_acup.jpg"}
-                className="card-img-top"
-                alt="..."
-              />
-              <div className="card-body">
-                <h5 className="card-title"> Sculp & Auricular Acupuncture </h5>
-                <p className="card-text">
-                  Discover the benefits of Auricular Acupuncture, a specialized
-                  therapy targeting key points in the ear to promote overall
-                  health and wellness.
-                </p>
-              </div>
-            </Link>
-          </div>
-
-          <div className="col-12 col-md-6 col-lg-4 p-3">
-            <Link to='/mastertungsacupuncture' className="card">
-              <img
-                src={process.env.PUBLIC_URL + "/Images/master_tungs.jpg"}
-                className="card-img-top"
-                alt="..."
-              />
-              <div className="card-body">
-                <h5 className="card-title"> Master Tung's Acupuncture </h5>
-                <p className="card-text">
-                  Unlock the healing power of Master Tung's Acupuncture,
-                  renowned for its rapid and effective pain relief using unique
-                  points and techniques.
-                </p>
-              </div>
-            </Link>
-          </div>
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+          >
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+          >
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Next</span>
+          </button>
         </div>
       </div>
-
-      <div className="carousel-item">
-        <div className="row">
-          <div className="col-12 col-md-6 col-lg-4 p-3">
-            <Link to='/moxibustion' className="card">
-              <img
-                src={process.env.PUBLIC_URL + "/Images/moxibustion.jpg"}
-                className="card-img-top"
-                alt="..."
-              />
-              <div className="card-body">
-                <h5 className="card-title"> Moxibustion </h5>
-                <p className="card-text">
-                  Experience the soothing warmth of Moxibustion, a traditional
-                  therapy that uses heat to stimulate healing and enhance your
-                  vitality.
-                </p>
-              </div>
-            </Link>
-          </div>
-
-          <div className="col-12 col-md-6 col-lg-4 p-3">
-            <Link to='/cuppingtherapy' className="card">
-              <img
-                src={process.env.PUBLIC_URL + "/Images/cupping_therapy.jpg"}
-                className="card-img-top"
-                alt="..."
-              />
-              <div className="card-body">
-                <h5 className="card-title"> Cupping Therapy </h5>
-                <p className="card-text">
-                  Revitalize your body with our ancient Cupping Therapy, known
-                  for its ability to improve circulation, reduce pain, and
-                  remove toxins.
-                </p>
-              </div>
-            </Link>
-          </div>
-
-          <div className="col-12 col-md-6 col-lg-4 p-3">
-            <Link to='/sujoktherapy' className="card">
-              <img
-                src={process.env.PUBLIC_URL + "/Images/sujok.jpg"}
-                className="card-img-top"
-                alt="..."
-              />
-              <div className="card-body">
-                <h5 className="card-title"> Sujok Therapy </h5>
-                <p className="card-text">
-                  Benefit from Sujok Therapy, a unique and effective treatment
-                  that balances your body’s energy through specific points on
-                  the hands and feet.
-                </p>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      <div className="carousel-item">
-        <div className="row">
-          <div className="col-12 col-md-6 col-lg-4 p-3">
-            <Link to='/pnsttherapy' className="card">
-              <img
-                src={process.env.PUBLIC_URL + "/Images/pnst.jpg"}
-                className="card-img-top"
-                alt="..."
-              />
-              <div className="card-body">
-                <h5 className="card-title"> Peripheral Nerve Stimulation Therapy </h5>
-                <p className="card-text">
-                  Enhance your wellness with PNST, a cutting-edge therapy that
-                  provides targeted relief for nerve pain and promotes optimal
-                  nervous system function.
-                </p>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-      <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span className="visually-hidden">Previous</span>
-    </button>
-    <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-      <span className="carousel-control-next-icon" aria-hidden="true"></span>
-      <span className="visually-hidden">Next</span>
-    </button>
-  </div>
-</div>
 
       <div className="achieve-balance-container p-3">
         <h3>
@@ -265,7 +249,10 @@ function Home() {
           </ul>
         </div>
         <div className="col-md-6 right-part-home-section-five p-4 p-md-5 pt-3 pt-md-5">
-          <img src={process.env.PUBLIC_URL + '/Images/home_ mission.jpg'}  alt="Treating" />
+          <img
+            src={process.env.PUBLIC_URL + "/Images/home_ mission.jpg"}
+            alt="Treating"
+          />
           <p className="pt-5">
             {" "}
             We uses a holistic approach to restore your body's natural balance.
@@ -282,12 +269,12 @@ function Home() {
       <div className="home-section-six d-md-flex">
         <div className="healers-image p-4 p-md-0">
           <img
-            src={process.env.PUBLIC_URL + '/Images/healer_home.jpg'} 
+            src={process.env.PUBLIC_URL + "/Images/healer_home.jpg"}
             alt="Healer"
             className="img-fluid"
           />
         </div>
-        <Link to='/about'>
+        <Link to="/about">
           <div className="p-4 pt-1 healers-detail-container">
             <div className="healers-detail p-3 pt-4">
               <h1 className="">Hr. Shaheera Jareesh</h1>
