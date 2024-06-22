@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/al-hamd-acupuncture/static/css/main.a021371b.css",
-    "main.js": "/al-hamd-acupuncture/static/js/main.a3b1ad22.js",
-    "static/media/bg_home_1.png": "/al-hamd-acupuncture/static/media/bg_home_1.215a21cd65647a066d1d.png",
-    "static/media/bg_image_1.jpg": "/al-hamd-acupuncture/static/media/bg_image_1.e570d7375dd5cc1286d6.jpg",
-    "index.html": "/al-hamd-acupuncture/index.html",
-    "main.a021371b.css.map": "/al-hamd-acupuncture/static/css/main.a021371b.css.map",
-    "main.a3b1ad22.js.map": "/al-hamd-acupuncture/static/js/main.a3b1ad22.js.map"
+    "main.css": "/alhamd-acupuncture/static/css/main.2051e0c4.css",
+    "main.js": "/alhamd-acupuncture/static/js/main.a3b1ad22.js",
+    "static/media/bg_home_1.png": "/alhamd-acupuncture/static/media/bg_home_1.215a21cd65647a066d1d.png",
+    "static/media/bg_image_1.jpg": "/alhamd-acupuncture/static/media/bg_image_1.e570d7375dd5cc1286d6.jpg",
+    "index.html": "/alhamd-acupuncture/index.html",
+    "main.2051e0c4.css.map": "/alhamd-acupuncture/static/css/main.2051e0c4.css.map",
+    "main.a3b1ad22.js.map": "/alhamd-acupuncture/static/js/main.a3b1ad22.js.map"
   },
   "entrypoints": [
-    "static/css/main.a021371b.css",
+    "static/css/main.2051e0c4.css",
     "static/js/main.a3b1ad22.js"
   ]
 }
