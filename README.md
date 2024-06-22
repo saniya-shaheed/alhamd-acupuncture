@@ -5,7 +5,7 @@
 # Features
 
     -Home Page: Overview of the clinic and its healer, services.
-    -Services: Detailed descriptions of the acupuncture services provided.
+    -Services Carousel: Detailed descriptions of the acupuncture services in carousels for better user interaction provided.
     -Contact: Form for users to send messages to the clinic.
     -Booking System: Form to book an appointment.
     -Responsive Design: Optimized for various devices.
