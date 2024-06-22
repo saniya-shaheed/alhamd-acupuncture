@@ -26,7 +26,10 @@ function PNSTherapy() {
           inflammation, providing pain relief and promoting nerve healing.
         </p>
         <div className="tcm-image-container col-sm-6 d-flex justify-content-center">
-          <img src="/Images/pnstherapy.jpg" alt="PNST" />
+          <img
+            src={process.env.PUBLIC_URL + "/Images/pnstherapy.jpg"}
+            alt="PNST"
+          />
         </div>
       </div>
       <h3 className="ps-2">It can solve</h3>

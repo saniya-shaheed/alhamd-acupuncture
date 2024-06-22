@@ -20,7 +20,7 @@ function Header() {
       <nav className="navbar navbar-expand-lg navbar-light">
         <Link to="/" className="navbar-brand p-3 pt-1 pb-1">
           <img
-            src="/Images/logo_and_name.png"
+            src={process.env.PUBLIC_URL + '/Images/logo_and_name.png'}
             className="w-100 ps-md-2"
             alt="Al Hamd Acupuncture"
           />

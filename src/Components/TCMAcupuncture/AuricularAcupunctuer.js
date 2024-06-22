@@ -25,7 +25,7 @@ function AuricularAcupunctuer() {
         </p>
         <div className="tcm-image-container col-sm-6 d-flex justify-content-center">
           <img
-            src="/Images/Ear-Acupuncture.jpg"
+            src={process.env.PUBLIC_URL + '/Images/Ear-Acupuncture.jpg'} 
             alt="Auricular Acupuncture"
             className="w-100"
           />

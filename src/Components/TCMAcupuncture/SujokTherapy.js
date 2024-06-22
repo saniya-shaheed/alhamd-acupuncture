@@ -24,7 +24,11 @@ function SujokTherapy() {
           promote healing.
         </p>
         <div className="tcm-image-container col-sm-6 d-flex justify-content-center">
-          <img src="/Images/sujoktherapy.jpg" alt="Sujok Therapy" className="w-100" />
+          <img
+            src={process.env.PUBLIC_URL + "/Images/sujoktherapy.jpg"}
+            alt="Sujok Therapy"
+            className="w-100"
+          />
         </div>
       </div>
       <h3 className="ps-2">It can solve</h3>

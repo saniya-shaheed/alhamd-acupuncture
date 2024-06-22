@@ -3,6 +3,7 @@ import "./Home.css";
 import "../Header/Header.css";
 import { useModal } from "../Hooks/useModal";
 import BookAnAppointment from "../BookAnAppointment";
+import { Link } from "react-router-dom";
 
 function Home() {
   const {
@@ -78,9 +79,13 @@ function Home() {
       {/* HOME SECTION THREE  */}
       <div className="home-section-three p-md-5 p-3 ">
         <div className="row">
-          <a href="" className="col-12 col-md-6 col-lg-4 p-3">
+          <Link to='/tcmacupuncture' className="col-12 col-md-6 col-lg-4 p-3">
             <div class="card">
-              <img src="/Images/tsm_acup.jpg" class="card-img-top" alt="..." />
+              <img
+                src={process.env.PUBLIC_URL + "/Images/tsm_acup.jpg"}
+                class="card-img-top"
+                alt="..."
+              />
               <div class="card-body">
                 <h5 class="card-title"> TSM Acupuncture </h5>
                 <p class="card-text">
@@ -90,12 +95,12 @@ function Home() {
                 </p>
               </div>
             </div>
-          </a>
+          </Link>
 
-          <a href="" className="col-12 col-md-6 col-lg-4 p-3">
+          <Link to='/auricularacupuncture' className="col-12 col-md-6 col-lg-4 p-3">
             <div class="card">
               <img
-                src="/Images/auricular_acup.jpg"
+                src={process.env.PUBLIC_URL + "/Images/auricular_acup.jpg"}
                 class="card-img-top"
                 alt="..."
               />
@@ -108,12 +113,12 @@ function Home() {
                 </p>
               </div>
             </div>
-          </a>
+          </Link>
 
-          <a href="" className="col-12 col-md-6 col-lg-4 p-3">
+          <Link to='/mastertungsacupuncture' className="col-12 col-md-6 col-lg-4 p-3">
             <div class="card">
               <img
-                src="/Images/master_tungs.jpg"
+                src={process.env.PUBLIC_URL + "/Images/master_tungs.jpg"}
                 class="card-img-top"
                 alt="..."
               />
@@ -126,12 +131,12 @@ function Home() {
                 </p>
               </div>
             </div>
-          </a>
+          </Link>
 
-          <a href="" className="col-12 col-md-6 col-lg-4 p-3">
+          <Link to='/moxibustion' className="col-12 col-md-6 col-lg-4 p-3">
             <div class="card">
               <img
-                src="/Images/moxibustion.jpg"
+                src={process.env.PUBLIC_URL + "/Images/moxibustion.jpg"}
                 class="card-img-top"
                 alt="..."
               />
@@ -144,12 +149,12 @@ function Home() {
                 </p>
               </div>
             </div>
-          </a>
+          </Link>
 
-          <a href="" className="col-12 col-md-6 col-lg-4 p-3">
+          <Link to='/cuppingtherapy' className="col-12 col-md-6 col-lg-4 p-3">
             <div class="card">
               <img
-                src="/Images/cupping_therapy.jpg"
+                src={process.env.PUBLIC_URL + "/Images/cupping_therapy.jpg"}
                 class="card-img-top"
                 alt="..."
               />
@@ -162,11 +167,15 @@ function Home() {
                 </p>
               </div>
             </div>
-          </a>
+          </Link>
 
-          <a href="" className="col-12 col-md-6 col-lg-4 p-3">
+          <Link to='/sujoktherapy' className="col-12 col-md-6 col-lg-4 p-3">
             <div class="card">
-              <img src="/Images/sujok.jpg" class="card-img-top" alt="..." />
+              <img
+                src={process.env.PUBLIC_URL + "/Images/sujok.jpg"}
+                class="card-img-top"
+                alt="..."
+              />
               <div class="card-body">
                 <h5 class="card-title"> Sujok Therapy </h5>
                 <p class="card-text">
@@ -176,11 +185,15 @@ function Home() {
                 </p>
               </div>
             </div>
-          </a>
+          </Link>
 
-          <a href="" className="col-12 col-md-6 col-lg-4 p-3">
+          <Link to='/pnsttherapy' className="col-12 col-md-6 col-lg-4 p-3">
             <div class="card">
-              <img src="/Images/pnst.jpg" class="card-img-top" alt="..." />
+              <img
+                src={process.env.PUBLIC_URL + "/Images/pnst.jpg"}
+                class="card-img-top"
+                alt="..."
+              />
               <div class="card-body">
                 <h5 class="card-title">
                   {" "}
@@ -193,7 +206,7 @@ function Home() {
                 </p>
               </div>
             </div>
-          </a>
+          </Link>
         </div>
       </div>
       <div className="achieve-balance-container p-3">
@@ -231,7 +244,7 @@ function Home() {
           </ul>
         </div>
         <div className="col-md-6 right-part-home-section-five p-4 p-md-5 pt-3 pt-md-5">
-          <img src="/Images/home_ mission.jpg" alt="Treating" />
+          <img src={process.env.PUBLIC_URL + '/Images/home_ mission.jpg'}  alt="Treating" />
           <p className="pt-5">
             {" "}
             We uses a holistic approach to restore your body's natural balance.
@@ -248,12 +261,12 @@ function Home() {
       <div className="home-section-six d-md-flex">
         <div className="healers-image p-4 p-md-0">
           <img
-            src="/Images/healer_home.jpg"
+            src={process.env.PUBLIC_URL + '/Images/healer_home.jpg'} 
             alt="Healer"
             className="img-fluid"
           />
         </div>
-        <a href="">
+        <Link to='/about'>
           <div className="p-4 pt-1 healers-detail-container">
             <div className="healers-detail p-3 pt-4">
               <h1 className="">Hr. Shaheera Jareesh</h1>
@@ -269,7 +282,7 @@ function Home() {
               </p>
             </div>
           </div>
-        </a>
+        </Link>
       </div>
 
       {/* HOME SECTION SEVEN */}

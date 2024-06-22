@@ -25,7 +25,7 @@ function MasterTungsAcupuncture() {
         </p>
         <div className="tcm-image-container col-sm-6 d-flex justify-content-center">
           <img
-            src="/Images/mastertung_acupuncture.jpg"
+            src={process.env.PUBLIC_URL + '/Images/mastertung_acupuncture.jpg'} 
             alt="Master Tung's Acupuncture"
           />
         </div>

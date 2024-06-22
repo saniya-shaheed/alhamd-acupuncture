@@ -23,7 +23,7 @@ function TCMAcupuncture() {
           on the body to balance the flow of energy and promote natural healing.
         </p>
         <div className="tcm-image-container col-sm-6 d-flex justify-content-center">
-          <img src="/Images/tsm_acup_main.jpg" alt="TSM Acupuncture" />
+          <img src={process.env.PUBLIC_URL + '/Images/tsm_acup_main.jpg'}  alt="TSM Acupuncture" />
         </div>
       </div>
       <h3 className="ps-2">It can solve</h3>

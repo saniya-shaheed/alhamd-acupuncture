@@ -24,7 +24,7 @@ function CuppingTherapy() {
         </p>
         <div className="tcm-image-container col-sm-6 d-flex justify-content-center">
           <img
-            src="/Images/cuppingtherapy.jpg"
+            src={process.env.PUBLIC_URL + '/Images/cuppingtherapy.jpg'} 
             alt="Cupping Therapy"
             className="w-100"
           />

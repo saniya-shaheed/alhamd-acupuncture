@@ -24,7 +24,10 @@ function Moxibustion() {
           and promotes healing.
         </p>
         <div className="tcm-image-container col-sm-6 d-flex justify-content-center">
-          <img src="/Images/moxibustiontherapy.jpg" alt="Moxibustion" />
+          <img
+            src={process.env.PUBLIC_URL + "/Images/moxibustiontherapy.jpg"}
+            alt="Moxibustion"
+          />
         </div>
       </div>
       <h3 className="ps-2">It can solve</h3>
