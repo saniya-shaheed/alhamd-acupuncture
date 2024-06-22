@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/alhamd-acupuncture/static/css/main.2051e0c4.css",
-    "main.js": "/alhamd-acupuncture/static/js/main.bf02f253.js",
+    "main.js": "/alhamd-acupuncture/static/js/main.7984b01a.js",
     "static/media/bg_home_1.png": "/alhamd-acupuncture/static/media/bg_home_1.215a21cd65647a066d1d.png",
     "static/media/bg_image_1.jpg": "/alhamd-acupuncture/static/media/bg_image_1.e570d7375dd5cc1286d6.jpg",
     "index.html": "/alhamd-acupuncture/index.html",
     "main.2051e0c4.css.map": "/alhamd-acupuncture/static/css/main.2051e0c4.css.map",
-    "main.bf02f253.js.map": "/alhamd-acupuncture/static/js/main.bf02f253.js.map"
+    "main.7984b01a.js.map": "/alhamd-acupuncture/static/js/main.7984b01a.js.map"
   },
   "entrypoints": [
     "static/css/main.2051e0c4.css",
-    "static/js/main.bf02f253.js"
+    "static/js/main.7984b01a.js"
   ]
 }
